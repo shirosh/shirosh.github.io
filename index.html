@@ -1,7 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        #downloadButton {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
 
-Hello World! I'm Randika
+    <header>
+        <h1>Randika Silva</h1>
+        <p>Email: randikasilva{at}gmail.com | Phone: +94777333702 | LinkedIn: linkedin.com/in/shiroshan</p>
+    </header>
+
+    <section class="section">
+        <h2>Summary</h2>
+        <p>An innovative technology enthusiast with a passion for creating ideas, driving product development, and implementing strategic solutions.</p>
+    </section>
+
+    <section class="section">
+        <h2>Experience</h2>
+        <!-- Include your experience details here -->
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <!-- Include your education details here -->
+    </section>
+
+    <section class="section">
+        <h2>Skills</h2>
+        <!-- Include your skills list here -->
+    </section>
+
+    <section class="section">
+        <h2>References</h2>
+        <p>Available upon request.</p>
+    </section>
+
+    <button id="downloadButton" onclick="downloadResume()">Download Resume</button>
+
+    <script>
+        function downloadResume() {
+            // Replace the '#' with the actual link to your resume file
+            var resumeLink = 'Randika-2023-11-18-Resume.pdf';
+            var summaryLink = '#';
+
+            // Create an invisible link element
+            var downloadLink = document.createElement('a');
+            downloadLink.href = resumeLink;
+            downloadLink.download = 'Randika-2023-11-18-Resume.pdf'; // You can customize the file name
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+
 </body>
 </html>
