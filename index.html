@@ -3,113 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Resume</title>
+    <title>Randika Silva | AI Solutions Architect</title>
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --border-color: #000000;
+            --max-width: 800px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            padding: 40px 20px;
         }
-        h1, h2, h3 {
-            color: #333;
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
         }
-        .section {
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .contact-info span::after {
+            content: " |";
+        }
+        .contact-info span:last-child::after {
+            content: "";
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+
+        .job-meta, .project-meta {
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
             margin-bottom: 20px;
         }
-        #downloadButton {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+
+        .sub-section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .job-meta, .project-meta {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
 
+<div class="container">
     <header>
         <h1>Randika Silva</h1>
-        <p>Email: randikasilva{at}gmail.com | Phone: +94777333702 | LinkedIn: linkedin.com/in/shiroshan</p>
+        <div class="contact-info">
+            <span>Ragama, Sri Lanka</span>
+            <span>+94777333702</span>
+            <span><a href="mailto:randikasilva@gmail.com">randikasilva@gmail.com</a></span>
+            <span><a href="https://linkedin.com/in/shiroshan" target="_blank">linkedin.com/in/shiroshan</a></span>
+            <span><a href="https://shirosh.github.io" target="_blank">shirosh.github.io</a></span>
+        </div>
     </header>
-    <section class="section">
-    <button id="downloadButton" onclick="downloadResume()">Download Resume</button>
 
-    <script>
-        function downloadResume() {
-            // Replace the '#' with the actual link to your resume file
-            var resumeLink = 'Randika-23-11-19-Resume.pdf';
-            var summaryLink = '#';
-
-            // Create an invisible link element
-            var downloadLink = document.createElement('a');
-            downloadLink.href = resumeLink;
-            downloadLink.download = 'Randika-23-11-19-Resume.pdf'; // You can customize the file name
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-        }
-    </script>
-    </section>
-    <section class="section">
-        <h2>Summary</h2>
-        <p>An innovative technology enthusiast with a passion for creating ideas, driving product development, and implementing strategic solutions.</p>
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>Enterprise-scale AI Solutions Architect and Lead Engineer with over 7 years of deep domain experience designing, blueprinting, and executing cutting-edge machine learning, real-time communication, and Edge AI systems. A proven strategic partner adept at translating complex business requirements into robust, cloud-native technical architectures and hardware-optimized edge solutions. Expert in orchestrating end-to-end model lifecycles, real-time voice data pipelines, and embedded vision frameworks while ensuring strict compliance with security and corporate governance standards. Celebrated for delivering high-impact, industry-recognized platforms that drive corporate digital transformation and innovation.</p>
     </section>
 
-    <section class="section">
-        <h2>Experience</h2>
-        <section class="experience">
-            <h2 class="job-title">Senior R&D Engineer</h2>
-            <p class="company">Dialog Axiata PLC, Colombo, Sri Lanka</p>
-            <p class="date">MARCH 2019 - PRESENT</p>
+    <section id="competencies">
+        <h2>Core Competencies</h2>
+        <ul>
+            <li><strong>AI Architecture & Design:</strong> Enterprise AI Solutions, LLM Orchestration, Agentic Workflows, Retrieval-Augmented Generation (RAG), Computer Vision.</li>
+            <li><strong>AI/ML Frameworks:</strong> TensorFlow, PyTorch, LangChain, Agno, JAX, Keras, OpenCV, Hugging Face.</li>
+            <li><strong>Cloud & Microservices:</strong> AWS (ECS/EC2/Bedrock), GCP (GKE/Vertex AI), Huawei Cloud, Docker, FastAPI, Go, CI/CD pipelines.</li>
+            <li><strong>Data & Telco Engineering:</strong> End-to-End Data Pipelines, Data Preprocessing, SIP, WebRTC, VoIP, 5G Infrastructure.</li>
+            <li><strong>Research & Development:</strong> Competitive Analysis, Emerging Technology Evaluation, Technical Blueprinting.</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        
+        <div class="job-item">
+            <div class="job-meta">
+                <span>Dialog Axiata PLC &mdash; Colombo, Sri Lanka</span>
+            </div>
+            <div class="job-meta" style="margin-top: -5px; font-weight: normal;">
+                <span>Lead Engineer &ndash; Innovation and R&D</span>
+                <span>March 2019 &ndash; Present</span>
+            </div>
             <ul>
-                <li>New Product Development from concept to prototype to GTM.</li>
-                <li>Hands-on development on IoT, AI/ML, and Digital Transformation applications in terms of developing prototypes and GTM products.</li>
-                <li>Innovation Strategy formulation and architecture development for platform play offerings inside Dialog.</li>
-                <li>Research on latest technology advancements in the world and how they can be integrated with products and services.</li>
-                <li>Management and Coordination with Development teams in designing and development of applications.</li>
-                <li>Direct engagement and consultation with enterprise customers to enable next-generation digitization solutions to enhance their business operations.</li>
-                <li>Conduct Knowledge sharing sessions for internal and external developer communities.</li>
+                <li><strong>Enterprise Architecture Blueprinting:</strong> Formulate comprehensive innovation strategies and design scalable, end-to-end technical blueprints for AI/ML, Generative AI, and IoT platform offerings across the corporate ecosystem.</li>
+                <li><strong>Stakeholder Alignment:</strong> Collaborate closely with corporate enterprise clients, product managers, and business stakeholders to translate abstract business requirements into clear, production-ready AI solution architectures.</li>
+                <li><strong>Cross-Functional Delivery:</strong> Act as the primary technical bridge connecting business teams with engineering divisions to streamline model development pipelines, testing, and comprehensive system validation.</li>
+                <li><strong>Platform Design & Infrastructure:</strong> Contribute to cloud-based platform architectures, leveraging AWS, Docker microservices, and high-performance APIs to optimize solution scalability, compute efficiency, and total cost of ownership.</li>
+                <li><strong>Driving Innovation:</strong> Conduct deep research on emerging technologies and systematically apply them to enhance existing systems or introduce high-value new products and services.</li>
+                <li><strong>Knowledge Leadership:</strong> Facilitate technical knowledge-sharing and mentoring sessions for internal engineering teams and external developer communities to accelerate the corporate adoption of emerging AI technologies.</li>
             </ul>
-        </section>
-    
-        <section class="experience">
-            <h2 class="job-title">Electronic Engineer (Consultant)</h2>
-            <p class="company">Center for Research and Development - Ministry of Defense, Homagama, Sri Lanka</p>
-            <p class="date">JUNE 2017 - JUNE 2018</p>
-            <p>Development of Ultra-Wideband based Indoor Positioning System</p>
-        </section>
-    
-        <section class="experience">
-            <h2 class="job-title">Telecom Engineer (Internship)</h2>
-            <p class="company">Etisalat Lanka (Pvt) Ltd, Colombo, Sri Lanka</p>
-            <p class="date">NOVEMBER 2017 - JANUARY 2018</p>
-            <p>Assist on Transmission Network Planning, Radio Access Network Optimization, and Customer Technical Support</p>
-        </section>
-    
-        <section class="experience">
-            <h2 class="job-title">Embedded Systems Engineer (Internship)</h2>
-            <p class="company">JLanka Power and Energy (Pvt) Ltd, Colombo, Sri Lanka</p>
-            <p class="date">NOVEMBER 2016 - JANUARY 2017</p>
-            <p>Development of GoEV Electric Vehicle Charging Platform</p>
-        </section>
-    
+        </div>
+
+        <div class="job-item" style="margin-top: 15px;">
+            <div class="job-meta">
+                <span>Center for Research and Development &ndash; Ministry of Defense &mdash; Homagama, Sri Lanka</span>
+            </div>
+            <div class="job-meta" style="margin-top: -5px; font-weight: normal;">
+                <span>Electronic Engineer (Consultant)</span>
+                <span>June 2017 &ndash; June 2018</span>
+            </div>
+            <ul>
+                <li>Designed the architectural framework and data acquisition infrastructure for an Ultra-Wideband based indoor positioning system.</li>
+            </ul>
+        </div>
+
+        <div class="job-item" style="margin-top: 15px;">
+            <div class="job-meta">
+                <span>Etisalat Lanka (Pvt) Ltd &mdash; Colombo, Sri Lanka</span>
+            </div>
+            <div class="job-meta" style="margin-top: -5px; font-weight: normal;">
+                <span>Telecom Engineer (Internship)</span>
+                <span>November 2017 &ndash; January 2018</span>
+            </div>
+            <ul>
+                <li>Supported transmission network planning, radio access network optimization pipelines, and managed advanced Level-2 technical support engineering.</li>
+            </ul>
+        </div>
     </section>
 
-    <section class="section">
+    <section id="projects">
+        <h2>Notable Projects</h2>
+
+        <div class="sub-section-title">AI Platform & Generative Automation Infrastructure</div>
+
+        <div class="project-item">
+            <h3>Agentic Voice AI Platform (2026)</h3>
+            <div class="project-meta">
+                <span>Role: Principal Architect / Lead Engineer</span>
+                <span>Joint-Winner: "Innovation of the Year" at Dialog Awards 2026</span>
+            </div>
+            <p>Blueprinted and launched a low-latency, enterprise-grade voice automation platform bridging core telecom infrastructure (SIP/WebRTC protocols) with conversational AI agents. Built robust data preprocessing and streaming audio pipelines handling high concurrent loads with minimal latency on the cloud. This platform is successfully integrated into major corporate services including Govi Mithuru, Yeheli, Dialog Marketplace, and Nenasa.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Agentic AI Platform for Digital Transformation (2024)</h3>
+            <div class="project-meta">
+                <span>Role: Solutions Architect</span>
+            </div>
+            <p>Designed a highly scalable B2B Agentic AI framework featuring multi-agent orchestration workflows using Agno and FastAPI. Containerized the platform via Docker and deployed it on AWS to automate complex knowledge evaluation and client interactions. Successfully utilized across Genie AI Assistant, ILO Knowledge Assistant, Govi Mithuru, Yeheli, and Dialog AI corporate portfolios.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>CAMARA Open Gateway Integration for Banking Security (2025)</h3>
+            <div class="project-meta">
+                <span>Role: API & Integration Architect</span>
+            </div>
+            <p>Developed high-throughput microservices and secure APIs conforming to strict global CAMARA standards. Launched production-ready Number Verification and Number Lifecycle Events APIs to deliver real-time fraud prevention metrics to major financial institutions in deep collaboration with partner Mobile Networks.</p>
+        </div>
+
+        <div class="sub-section-title">Edge AI & Advanced Robotics Architecture</div>
+
+        <div class="project-item">
+            <h3>Video Analytics at the Edge Platform (2023)</h3>
+            <div class="project-meta">
+                <span>Role: Embedded AI Architect</span>
+            </div>
+            <p>Designed and optimized high-performance computer vision pipelines leveraging YOLO/ViT object detection and SigLip2 Encoder models for real-time video analytics. Engineered the ecosystem to execute localized edge AI computing on resource-constrained NVIDIA Jetson Nano, HEOP, and OpenCV OAK-1 hardware accelerators.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Unitree G1 Humanoid Robotics & 5G Network Orchestration (2021)</h3>
+            <div class="project-meta">
+                <span>Role: Systems & Robotics Architect</span>
+            </div>
+            <p>Designed and demonstrated an end-to-end technical blueprint bridging advanced robotics with enterprise 5G network infrastructure. Engineered ultra-low-latency telemetry pipelines and edge command-and-control layers to coordinate Unitree G1 humanoid robotics platforms over a pilot 5G network utilizing Node-RED, MQTT, and hardware-accelerated TensorFlow systems.</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Dialog Smart Biz IoT Application (2020)</h3>
+            <div class="project-meta">
+                <span>Role: Embedded Systems Architect</span>
+            </div>
+            <p>Developed and optimized Dialog Smart Biz IoT vertical applications conforming structurally to Axiata's XPand IoT platform. Contributed end-to-end to Ideamart IoT, SIMA, NMS, Smart City projects, Weather Guru, Vaayu, LECO Smart metering, M2M applications, and extensive NB-IoT/Cat-M1 network testing with physical embedded devices.</p>
+        </div>
+    </section>
+
+    <section id="education">
         <h2>Education</h2>
-        <!-- Include your education details here -->
+        <p><strong>BSc Eng (Hons) in Electrical & Electronic Engineering</strong></p>
+        <p>SLIIT, Sri Lanka &nbsp;|&nbsp; <em>January 2015 &ndash; November 2018</em></p>
     </section>
 
-    <section class="section">
-        <h2>Skills</h2>
-        <!-- Include your skills list here -->
+    <section id="certifications">
+        <h2>Professional Certifications</h2>
+        <ul>
+            <li>Custom Models, Layers, and Loss Functions with TensorFlow (<em>DeepLearning.AI</em>)</li>
+            <li>Build Basic Generative Adversarial Networks (<em>DeepLearning.AI</em>)</li>
+            <li>Computer Vision with Embedded Machine Learning (<em>Edge Impulse</em>)</li>
+            <li>AZ-220: Microsoft Azure IoT Developer (<em>Iverson Associates</em>)</li>
+            <li>Data Citizen Bronze Training (<em>Data Science Academy</em>)</li>
+        </ul>
     </section>
 
-    <section class="section">
-        <h2>References</h2>
-        <p>Available upon request.</p>
+    <section id="awards">
+        <h2>Key Awards & Achievements</h2>
+        <ul>
+            <li><strong>Winner:</strong> Innovation of the Year (2026) &ndash; For architecting the enterprise Agentic Voice AI platform.</li>
+            <li><strong>Leader:</strong> LEAP NOW Initiative (2020) &ndash; Awarded Best Digitization Initiative for Next-Gen IR 4.0 infrastructure.</li>
+            <li><strong>Runner-Up:</strong> IEEE IAS CMD Robotics Demonstration Contest, Baltimore, USA (2019).</li>
+            <li><strong>Finalist:</strong> "Create Intelligence at the Edge" Global Contest by Hackster.io & Xilinx (2018).</li>
+        </ul>
     </section>
-
+</div>
 
 </body>
 </html>
+"""
+
+with open('index.html', 'w') as f:
+    f.write(html_content)
+print("index.html created successfully.")
